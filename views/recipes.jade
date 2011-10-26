@@ -1,0 +1,13 @@
+ul.articles
+	- each recipe in recipes
+		li
+			a(href="ssm://recipe/#{recipe.namn}").clearfix
+				div.img.recipeimage
+					- if (recipe.thumb)
+						img(src="#{recipe.thumb}")
+				div.content
+					div.name #{recipe.namn.substring(7)}
+					div.ssm 
+						img(src="/images/seasonIndicators/#{recipe.s1}").season
+				div.indicator
+					img(src="/images/indicator.png")

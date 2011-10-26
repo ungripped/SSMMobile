@@ -1,0 +1,14 @@
+ul.articles
+	- each article in articles
+		li
+			a(href="ssm://article/#{article.namn}").clearfix
+				div.img 
+					img(src="#{article.thumb}")
+				div.content
+					div.name
+						#{article.namn}
+					div.ssm 
+						img(src="/images/seasonIndicators/#{article.s1}").season
+				div.indicator
+					img(src="/images/indicator.png")
+						
