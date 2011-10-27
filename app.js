@@ -163,14 +163,11 @@ app.get('/articles', function(req, res) {
 	console.log("/articles");
 	fs.readFile(articlesFile, function(err, data) {
 		if (err) throw err;
-		
-		setTimeout(function() {
-			var d = JSON.parse(data);
-			res.render('articles', {
-				title: 'Artiklar',
-				articles: d
-			});
-		}, 500);
+		var d = JSON.parse(data);
+		res.render('articles', {
+			title: 'Artiklar',
+			articles: d
+		});
 	});
 });
 
@@ -178,14 +175,11 @@ app.get('/recipes', function(req, res) {
 	console.log("/recipes");
 	fs.readFile(recipesFile, function(err, data) {
 		if (err) throw err;
-		
-		setTimeout(function() {
-			var d = JSON.parse(data);
-			res.render('recipes', {
-				title: 'Recept',
-				recipes: d
-			});
-		}, 500);
+		var d = JSON.parse(data);
+		res.render('recipes', {
+			title: 'Recept',
+			recipes: d
+		});
 	});
 });
 
