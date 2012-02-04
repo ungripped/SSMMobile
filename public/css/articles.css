@@ -10,6 +10,13 @@ ul.articles {
     border-bottom: 1px solid whiteSmoke;
     padding: 5px 0 5px 5px; }
     ul.articles li a {
+      padding-left: 60px;
+      padding-right: 20px;
+      height: 50px;
+      background: url(../images/indicator.png) no-repeat;
+      background-position: 100% 16px;
+      background-size: 10px 13px;
+      position: relative;
       display: block;
       text-decoration: none;
       color: #000;
@@ -19,26 +26,13 @@ ul.articles {
         height: 50px;
         width: 50px;
         overflow: hidden;
-        float: left;
-        vertical-align: middle; }
+        vertical-align: middle;
+        position: absolute;
+        top: 0;
+        left: 0; }
         ul.articles li a div.img img {
           width: 100px;
           clip: rect(0px 50px 50px 0px); }
-      ul.articles li a div.content {
-        margin-left: 10px;
-        height: 50px;
-        float: left; }
-        ul.articles li a div.content div.name {
-          overflow: hidden;
-          height: 21px;
-          width: 220px; }
-        ul.articles li a div.content img.season {
-          width: 220px; }
-      ul.articles li a div.indicator {
-        float: right;
-        padding: 11px 5px 0 0; }
-        ul.articles li a div.indicator img {
-          height: 13px; }
   ul.articles .recipeimage {
     background: url(../images/recipe.png) top left no-repeat; }
 

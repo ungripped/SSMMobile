@@ -2,6 +2,14 @@ ul.articles
 	- each article in articles
 		li
 			a(href="ssm://article/#{article.namn}").clearfix
+				div.img
+					img(src="#{article.thumb}")
+				h3.name
+					#{article.namn}
+				img(src="/images/seasonIndicators/#{article.s1}").season
+
+			
+			//
 				div.img 
 					img(src="#{article.thumb}")
 				div.content

@@ -14,6 +14,14 @@ ul.articles {
 		padding: 5px 0 5px 5px;
 		
 		a {
+			padding-left: 60px;
+			padding-right: 20px;
+			height: 50px;
+			background: url(../images/indicator.png) no-repeat;
+			background-position: 100% 16px;
+			background-size: 10px 13px;
+			position: relative;
+
 			display: block;
 			text-decoration: none;
 			color: #000;
@@ -24,34 +32,14 @@ ul.articles {
 				height: 50px;
 				width: 50px;
 				overflow: hidden;
-				float: left;
 				vertical-align: middle;
-				
+				position: absolute;
+				top: 0;
+				left: 0;
+
 				img {
 					width: 100px;
 					clip: rect(0px 50px 50px 0px);
-				}
-			}
-
-			div.content {
-				margin-left: 10px;
-				height: 50px;
-				float: left;
-				
-				div.name {
-					overflow: hidden;
-					height: 21px;
-					width: 220px;
-				}
-				img.season {
-					width: 220px;
-				}
-			}
-			div.indicator {
-				float: right;
-				padding: 11px 5px 0 0;
-				img {
-					height: 13px;
 				}
 			}
 		}
