@@ -6,7 +6,7 @@ ul.articles
 					img(src="#{article.thumb}")
 				h3.name
 					#{article.namn}
-				img(src="/images/seasonIndicators/#{article.s1}").season
+				div(style="background: url(/images/seasonIndicators/#{article.s1}) no-repeat").indicator
 
 			
 			//
@@ -16,7 +16,7 @@ ul.articles
 					div.name
 						#{article.namn}
 					div.ssm 
-						img(src="/images/seasonIndicators/#{article.s1}").season
+						img(src="").season
 				div.indicator
 					img(src="/images/indicator.png")
 						
