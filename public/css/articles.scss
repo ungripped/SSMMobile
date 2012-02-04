@@ -27,6 +27,11 @@ ul.articles {
 			color: #000;
 			font-size: 18px;
 			font-weight: bold;
+
+			h3 {
+				white-space: nowrap;
+				overflow: hidden;
+			}
 			
 			div.img {
 				height: 50px;

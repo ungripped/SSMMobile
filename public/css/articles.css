@@ -22,6 +22,9 @@ ul.articles {
       color: #000;
       font-size: 18px;
       font-weight: bold; }
+      ul.articles li a h3 {
+        white-space: nowrap;
+        overflow: hidden; }
       ul.articles li a div.img {
         height: 50px;
         width: 50px;

@@ -5,9 +5,6 @@ ul.articles
 				div.img.recipeimage
 					- if (recipe.thumb)
 						img(src="#{recipe.thumb}")
-				div.content
-					div.name #{recipe.namn.substring(7)}
-					div.ssm 
-						img(src="/images/seasonIndicators/#{recipe.s1}").season
-				div.indicator
-					img(src="/images/indicator.png")
+				h3.name 
+					#{recipe.namn}
+				div(style="background: url(/images/seasonIndicators/#{recipe.s1}) no-repeat").indicator
