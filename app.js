@@ -185,13 +185,13 @@ app.get('/recipes', function(req, res) {
 
 app.get('/generaterecipes/KHfkejo3489Jhfwlk298265lsfjkkw9s87lf', function(req, res) {
 	console.log('Fetching recipe list...');
-	var url = "http://www.xn--ssongsmat-v2a.nu/w/api.php?action=ssmlista&sasong=3&kategori=Recept&props=kategori%2Cbild%2CNyckel&format=json";
+	var url = "http://xn--ssongsmat-v2a.nu/w/api.php?action=ssmlista&sasong=3&kategori=Recept&props=kategori%2Cbild%2CNyckel&format=json";
 	loadSSMData(url, recipesFile, res);
 });
 
 app.get('/generatearticles/hJHsne95298FKJghsnnakwej7I29875khksj82745', function(req, res){
 	console.log("Fetching current article list...");
-	var url = "http://www.xn--ssongsmat-v2a.nu/w/api.php?action=ssmlista&sasong=3&ns=0&props=kategori%2Cbild%2CNyckel&format=json";
+	var url = "http://xn--ssongsmat-v2a.nu/w/api.php?action=ssmlista&sasong=3&ns=0&props=kategori%2Cbild%2CNyckel&format=json";
 	loadSSMData(url, articlesFile, res);
 });
 
