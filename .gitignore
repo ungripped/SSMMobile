@@ -6,3 +6,5 @@ public/images/seasonIndicators/*
 .DS_Store
 
 data/articles.json
+
+data/recipes.json
