@@ -14,7 +14,7 @@ ul.articles {
       padding-right: 20px;
       height: 50px;
       background: url(../images/indicator.png) no-repeat;
-      background-position: 100% 16px;
+      background-position: 99% 16px;
       background-size: 10px 13px;
       position: relative;
       display: block;
