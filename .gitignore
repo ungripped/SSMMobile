@@ -4,3 +4,5 @@ node_modules/**/*
 public/css/.sass-cache/**/*
 public/images/seasonIndicators/*
 .DS_Store
+
+data/articles.json
