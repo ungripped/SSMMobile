@@ -39,6 +39,7 @@ ul.articles {
       ul.articles li a .indicator {
         width: 230px;
         height: 20px;
+        background-size: 230px 20px;
         margin-top: 3px; }
   ul.articles .recipeimage {
     background: url(../images/recipe.png) top left no-repeat; }
