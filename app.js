@@ -81,7 +81,8 @@ function renderSeason(seasonInfo, cb) {
 			else if (item > 15 && item < 28) { opac = .67; }
 			else if (item >= 28) { opac = 1; }
 
-			ctx.fillStyle = 'rgba(140, 198, 57,' + opac + ')';
+			//ctx.fillStyle = 'rgba(140, 198, 57,' + opac + ')';
+			ctx.fillStyle = 'rgba(12, 157, 48,' + opac + ')';
 			ctx.beginPath();
 			ctx.arc(10 + index*19, 10, 8, 0, Math.PI*2, true);
 
