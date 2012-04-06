@@ -44,6 +44,8 @@ ul.articles {
 
 				img {
 					width: 100px;
+		            -webkit-border-radius: 6px;
+        		    border-radius: 6px;
 					clip: rect(0px 50px 50px 0px);
 				}
 			}

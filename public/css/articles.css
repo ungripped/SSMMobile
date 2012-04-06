@@ -35,6 +35,8 @@ ul.articles {
         left: 0; }
         ul.articles li a div.img img {
           width: 100px;
+          -webkit-border-radius: 6px;
+          border-radius: 6px;
           clip: rect(0px 50px 50px 0px); }
       ul.articles li a .indicator {
         width: 230px;
