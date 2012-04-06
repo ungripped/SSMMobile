@@ -62,7 +62,8 @@ function renderSeason(seasonInfo, cb) {
 		//	cb(fileName)
 		//	return;
 		//}
-		var canvas = new Canvas(230, 20);
+		//var canvas = new Canvas(230, 20);
+		var canvas = new Canvas(460, 40);
 		var ctx = canvas.getContext('2d');
 
 		ctx.strokeStyle = 'rgb(0,0,0)';
@@ -73,8 +74,8 @@ function renderSeason(seasonInfo, cb) {
 	    ctx.textAlign = "center";
 
 	    var man = new Array ("J","F","M","A","M","J","J","A","S","O","N","D");
-	    var adj = new Array (1,-1,-1,0,-1,1,1,0,-1,-1,-1,0);//höger/vänster-justering i pixlar av mpnadsbokstäver, fat de verkligen ska se centrerade ut
-		var adjVertical = [-1, 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 0];
+	    var adj = new Array (2,-2,-2,0,-2, 2,2,0,-2,-2,-2,0);//höger/vänster-justering i pixlar av mpnadsbokstäver, fat de verkligen ska se centrerade ut
+		var adjVertical = [-2, 0, 0, 0, 0, -2, -2, 0, 0, 0, 0, 0];
 		$(seasonInfo).each(function(item, index) {
 			var opac = 0;
 			if (item > 0 && item < 15) { opac = .33; } 
@@ -84,14 +85,16 @@ function renderSeason(seasonInfo, cb) {
 			//ctx.fillStyle = 'rgba(140, 198, 57,' + opac + ')';
 			ctx.fillStyle = 'rgba(12, 157, 48,' + opac + ')';
 			ctx.beginPath();
-			ctx.arc(10 + index*19, 10, 8, 0, Math.PI*2, true);
+			//ctx.arc(10 + index*19, 10, 8, 0, Math.PI*2, true);
+			ctx.arc(20 + index*38, 20, 16, 0, Math.PI*2, true);
 
 			ctx.closePath();
 	        ctx.fill();
 	        ctx.stroke();
 
 			ctx.fillStyle = 'rgba(0,0,0,1)';
-			ctx.fillText(man[index], index*19 + 10 + adj[index], 9 + adjVertical[index]);
+			//ctx.fillText(man[index], index*19 + 10 + adj[index], 9 + adjVertical[index]);
+			ctx.fillText(man[index], index*38 + 20 + adj[index], 18 + adjVertical[index]);
 		});
 
 		//console.log(filePath);
