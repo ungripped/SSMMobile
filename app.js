@@ -127,7 +127,7 @@ function loadSSMData(url, fileName, response) {
 				o.s1 = fileName;
 			});
 			
-			if (o.bild) {
+			if (o.bild && o.bild != "Fil:Recept ikon sasongsmat.png") {
 				var imgurl = encodeURI("http://xn--ssongsmat-v2a.nu/w/api.php?action=query&prop=imageinfo&titles=" + o.bild + "&iiprop=url&iiurlwidth=120&format=json");
 				
 				client.perform(imgurl, "GET", function(r2) {

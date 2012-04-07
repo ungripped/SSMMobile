@@ -44,6 +44,7 @@ ul.articles {
         background-size: 230px 20px;
         margin-top: 3px; }
   ul.articles .recipeimage {
+    background-size: 50% 50%;
     background: url(../images/recipe.png) top left no-repeat; }
 
 /* http://sonspring.com/journal/clearing-floats */
