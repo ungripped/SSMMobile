@@ -5,7 +5,7 @@ var routes = function(app) {
 
 	app.namespace('/generate', function() {
 		app.all('/*', function(req, res, next) {
-			if (req.connection.remoteAddress != "127.0.0.1") {
+			if (req.connection.remoteAddress != "127.0.0.1" && req.connection.remoteAddress != "109.74.5.165") {
 				console.log("Unauthorized access from: " + req.connection.remoteAddress);
 				throw new Error('Unauthorized');
 			}
