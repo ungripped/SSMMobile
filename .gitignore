@@ -6,4 +6,4 @@ public/images/seasonIndicators/*
 .DS_Store
 data/*
 data/**/*
-
+.sass-cache/**/*
