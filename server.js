@@ -16,7 +16,7 @@ var app = module.exports = express.createServer();
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.set('port', 3000);
+  app.set('port', 4000);
 
   app.use(express.bodyParser());
   app.use(express.methodOverride());
@@ -34,7 +34,7 @@ app.configure(function(){
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
   
-  app.set('port', 3001);
+  app.set('port', 4001);
   app.set('dburl', 'mongodb://localhost/ssm-dev');
 });
 
