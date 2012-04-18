@@ -5,7 +5,6 @@ var routes = function(app) {
 	var doRequest = function(res, model, view) {
 		model.findOne().sort('date', -1).run(function(error, data) {
 			if (error == null) {
-				console.log(data);
 				res.render(__dirname + "/views/" + view, data);
 			}
 			else {
