@@ -49,7 +49,7 @@ app.configure('production', function(){
 require('mongoose').connect(app.settings.dburl);
 
 require('./apps/mobile/routes')(app);
-require('./apps/generate/routes')(app);
+//require('./apps/generate/routes')(app);
 
 app.listen(app.settings.port, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

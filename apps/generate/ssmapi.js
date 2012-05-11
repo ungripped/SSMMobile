@@ -52,12 +52,15 @@ var api = function() {
 
 					// "mark" this val as "finished" for async.map:
 					callback(null, val);
+
+
 				});
 			}, function(err, results) {
 				// This is the *final* async.map callback - i.e. when all 
 				// items have finished.
 
 				cb(results);
+				console.log("All promises done...");
 			});		
 /*
 			var renderPromise = new Promise();
