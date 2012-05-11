@@ -19,8 +19,8 @@ require('./apps/schema');
 var generate = require('./apps/generate/app');
 
 if (process.argv[2] == 'articles') {
-  generate.articles();
+  generate.articles(mongoose);
 }
 else if (process.argv[2] == 'recipes') {
-  generate.recipes();
+  generate.recipes(mongoose);
 }
