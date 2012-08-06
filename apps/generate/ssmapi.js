@@ -27,10 +27,60 @@ var api = function() {
 		}
 	}
 
+	this.parseValues = function(data) {
+		data = _.filter(data, function(obj) { return obj.fulltext.indexOf('Special:') == -1; });
+
+		var values = _.map(data, function(obj) {
+			var newObj = {};
+	    
+	    if (obj.fulltext.indexOf("Recept:") != -1) {
+	    	newObj.namn = obj.fulltext.substring(7);
+	    }
+	    else {
+		    newObj.namn = obj.fulltext;
+		  }
+	    
+	    newObj.bild = obj.printouts.Bild[0].fulltext;
+	    newObj.kategori = obj.printouts.Kategori[0].fulltext.substring(9);
+	    
+	    var sasong = [0,0,0,0,0,0,0,0,0,0,0,0];
+	    var totalSeasonDays = 0;
+	    var inSeasonDays = 0;
+	    var today = new Date();
+	    today.setFullYear(1912);
+
+	    _(obj.printouts["I säsong"]).each(function(d) {
+	    	var date = new Date();
+        date.setTime(d*1000);
+
+        if (date.getTime() < today.getTime()) inSeasonDays++;
+        totalSeasonDays++;
+
+        sasong[date.getMonth()]++;
+	    });
+
+	    if (obj.printouts.Intresse.length > 0) {
+		    var intresse = obj.printouts.Intresse[0];
+
+		    newObj.nyckel = inSeasonDays * 2 + totalSeasonDays - intresse * 50;
+		  }
+		  else {
+		  	newObj.nyckel = 1000;
+		  }
+	    newObj.sasong = sasong;
+
+	    return newObj;
+		});
+		
+		return values;
+	}
+
 	this.loadSSMData = function(url, cb) {
 		var r = request(url, function(error, response, body) {
 			var resultObj = JSON.parse(body);
-			var values = _(resultObj.ssm).values();
+			//var values = _(resultObj.ssm).values();
+			console.log("Parsing values");
+			var values = self.parseValues(_(resultObj.query.results).values());
 			
 			values.sort(function(a, b) { return a.nyckel - b.nyckel });
 
