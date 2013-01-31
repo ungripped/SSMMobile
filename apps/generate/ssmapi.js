@@ -40,7 +40,9 @@ var api = function() {
 		    newObj.namn = obj.fulltext;
 		  }
 	    
-	    newObj.bild = obj.printouts.Bild[0].fulltext;
+	    if (obj.printouts.Bild[0])
+	    	newObj.bild = obj.printouts.Bild[0].fulltext;
+	    
 	    newObj.kategori = obj.printouts.Kategori[0].fulltext.substring(9);
 	    
 	    var sasong = [0,0,0,0,0,0,0,0,0,0,0,0];
