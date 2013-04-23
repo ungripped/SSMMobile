@@ -51,7 +51,7 @@ var api = function() {
 	    var today = new Date();
 	    today.setFullYear(1912);
 
-	    _(obj.printouts["I säsong"]).each(function(d) {
+	    _(obj.printouts["Har säsong den"]).each(function(d) {
 	    	var date = new Date();
         date.setTime(d*1000);
 

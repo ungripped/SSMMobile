@@ -36,7 +36,7 @@ module.exports = {
 	articles: function(mongoose) {
 		//var url = "http://xn--ssongsmat-v2a.nu/w/api.php?action=ssmlista&sasong=3&ns=0&props=kategori%2Cbild%2CNyckel&format=json";
 		
-		var url = "http://xn--ssongsmat-v2a.nu/w/api.php?action=ask&query=[[Kategori:Råvaror]]+[[Har%20säsong%20den::" + day() + "]]|?Kategori|?Bild|?Intresse|?I%20säsong|limit=500&format=json";
+		var url = "http://xn--ssongsmat-v2a.nu/w/api.php?action=ask&query=[[Kategori:Råvaror]]+[[Har%20säsong%20den::" + day() + "]]|?Kategori|?Bild|?Intresse|?Har%20säsong%20den|limit=500&format=json";
 		console.log(url);
 		doSSMRequest(url, mongoose.model('ArticleList'), 'Råvaror', function() {
 			setTimeout(function() {
@@ -47,7 +47,7 @@ module.exports = {
 	},
 	recipes: function(mongoose) {
 		//var url = "http://xn--ssongsmat-v2a.nu/w/api.php?action=ssmlista&sasong=3&kategori=Recept&props=kategori%2Cbild%2CNyckel&format=json";
-		var url = "http://xn--ssongsmat-v2a.nu/w/api.php?action=ask&query=[[Kategori:Recept]]+[[Har%20säsong%20den::" + day() + "]]|?Kategori|?Bild|?Intresse|?I%20säsong|limit=500&format=json";
+		var url = "http://xn--ssongsmat-v2a.nu/w/api.php?action=ask&query=[[Kategori:Recept]]+[[Har%20säsong%20den::" + day() + "]]|?Kategori|?Bild|?Intresse|?Har%20säsong%20den|limit=500&format=json";
 		doSSMRequest(url, mongoose.model('RecipeList'), 'Recept', function() {
 			setTimeout(function() {
 				console.log("Quitting...");
