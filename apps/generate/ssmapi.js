@@ -79,6 +79,7 @@ var api = function() {
 
 	this.loadSSMData = function(url, cb) {
 		var r = request(url, function(error, response, body) {
+			console.log(body);
 			var resultObj = JSON.parse(body);
 			//var values = _(resultObj.ssm).values();
 			console.log("Parsing values");
