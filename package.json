@@ -1,7 +1,7 @@
 {
-  "name": "hello-world",
-  "description": "hello world test app",
-  "version": "0.0.1",
+  "name": "SSMMobile",
+  "description": "Säsongsmat mobile",
+  "version": "2.0",
   "private": true,
   "dependencies": {
     "express": "~3.2.6",
