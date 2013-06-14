@@ -17,6 +17,7 @@ app.configure(function(){
   app.set('port', 4000);
 
   app.use('/admin', function(req, res, next) {
+    console.log(req.connection.remoteAddress);
     if (req.connection.remoteAddress != "127.0.0.1") res.send(401);
     else next();
   });
@@ -46,7 +47,7 @@ app.configure('production', function(){
 });
 
 var Memcached = require('memcached'),
-    memcached = new Memcached('localhost:11211');
+    memcached = new Memcached('127.0.0.1:11211');
 
 require('./apps/mobile/admin')(app, memcached);
 require('./apps/mobile/routes')(app, memcached);
