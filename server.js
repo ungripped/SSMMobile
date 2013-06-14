@@ -17,7 +17,6 @@ app.configure(function(){
   app.set('port', 4000);
 
   app.use('/admin', function(req, res, next) {
-    console.log(req.connection.remoteAddress);
     if (req.connection.remoteAddress != "127.0.0.1") res.send(401);
     else next();
   });
