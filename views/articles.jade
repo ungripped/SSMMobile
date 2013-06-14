@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  ul.articles
+    - each article in list
+      li
+        a(href="ssm://article/#{article.name}").clearfix
+          div.img
+            img(src="#{article.thumb}")
+          h3.name #{article.name}
+          div(style="background: url(/images/seasonIndicators/#{article.s1}) no-repeat").indicator

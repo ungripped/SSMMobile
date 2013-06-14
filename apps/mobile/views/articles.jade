@@ -1,9 +1,0 @@
-ul.articles
-	- each article in list
-		li
-			a(href="ssm://article/#{article.namn}").clearfix
-				div.img
-					img(src="#{article.thumb}")
-				h3.name
-					#{article.namn}
-				div(style="background: url(/images/seasonIndicators/#{article.s1}) no-repeat").indicator

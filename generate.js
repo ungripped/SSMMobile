@@ -1,12 +1,11 @@
-var mongoose = require('mongoose');
+var Memcached = require('memcached'),
+    memcached;
 
 if (process.argv[3] == 'development') {
-  console.log("Connecting to development database");
-  mongoose.connect('mongodb://localhost/ssm-dev');
+  memcached = new Memcached('localhost:11211');
 }
 else if (process.argv[3] == 'production') {
-  console.log("Connecting to production database");
-  mongoose.connect('mongodb://localhost/ssm-prod');
+  memcached = new Memcached('localhost:11211');
 }
 else {
   console.log("Usage: ");
@@ -14,13 +13,12 @@ else {
   process.exit();
 }
 
-require('./apps/schema');
 
 var generate = require('./apps/generate/app');
 
 if (process.argv[2] == 'articles') {
-  generate.articles(mongoose);
+  generate.articles(memcached);
 }
 else if (process.argv[2] == 'recipes') {
-  generate.recipes(mongoose);
+  generate.recipes(memcached);
 }
